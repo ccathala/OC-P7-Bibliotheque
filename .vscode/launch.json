@@ -1,0 +1,41 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "java",
+      "name": "Api-9001",
+      "request": "launch",
+      "mainClass": "com.oc.api.ApiApplication",
+      "projectName": "api",
+      "console": "internalConsole"
+    },
+    {
+      "type": "java",
+      "name": "Webapp-9002",
+      "request": "launch",
+      "mainClass": "com.oc.webapp.WebappApplication",
+      "projectName": "webapp",
+      "console": "internalConsole"
+    },
+    {
+      "type": "java",
+      "name": "Batch-9003",
+      "request": "launch",
+      "mainClass": "com.oc.batch.BatchApplication",
+      "projectName": "batch",
+      "console": "internalConsole"
+    },
+    {
+      "name": "Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": false,
+      "url": "https://localhost:9002",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

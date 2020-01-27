@@ -1,0 +1,16 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "sqltools.connections": [
+        {
+            "database": "OC_bibliotheque",
+            "dialect": "PostgreSQL",
+            "name": "OC_bibliotheque",
+            "password": "azerty",
+            "port": 5432,
+            "server": "localhost",
+            "username": "postgres"
+        }
+    ],
+    "maven.view": "flat",
+    "java.format.settings.url": "eclipse-formatter.xml"
+}
