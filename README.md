@@ -170,7 +170,7 @@ Ce fichier se trouve dans le répertoire /database
 
 ### Utilisateur enregistré
 
-Identifiant : ccathala.dev@gmail.com
+Identifiant : ccathala.dev@gmail.com  
 Mot de passe : azerty
 
 ## Technologies utilisées
