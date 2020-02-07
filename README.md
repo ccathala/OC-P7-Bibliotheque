@@ -168,6 +168,11 @@ Cette commande va compiler le code et lancer la séquence de test, générer le 
 
 Ce fichier se trouve dans le répertoire /database
 
+### Utilisateur enregistré
+
+Identifiant : ccathala.dev@gmail.com
+Mot de passe : azerty
+
 ## Technologies utilisées
 
 * JEE
