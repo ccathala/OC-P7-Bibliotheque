@@ -75,6 +75,7 @@ public class LibraryController {
         try {
             libraryAdded = libraryDao.save(library);
         } catch (Exception e) {
+            logger.debug("L'entité bibliothèque existe déjà, nom :" + library.getName());
             throw new EntityAlreadyExistsException("L'entité bibliothèque existe déjà, nom :" + library.getName());
         }
 
@@ -95,6 +96,7 @@ public class LibraryController {
         try {
             libraryDao.findById(libraryDetails.getId()).get();
         } catch (NoSuchElementException e) {
+            logger.debug("L'entité bibliothèque demandé n'existe pas, id: " + libraryDetails.getId());
             throw new RessourceNotFoundException("L'entité bibliothèque demandé n'existe pas, id: " + libraryDetails.getId());
         }
         
@@ -112,6 +114,7 @@ public class LibraryController {
         try {
             libraryDao.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
+            logger.debug("L'entité bibliothèque n'existe pas, id: " + id);
             throw new RessourceNotFoundException("L'entité bibliothèque n'existe pas, id: " + id);
         }
         

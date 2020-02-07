@@ -116,6 +116,7 @@ public class BookController {
         try {
             bookDao.findById(bookDetails.getId()).get();
         } catch (NoSuchElementException e) {
+            logger.debug("L'entité livre demandée n'existe pas, id: " + bookDetails.getId());
             throw new RessourceNotFoundException("L'entité livre demandée n'existe pas, id: " + bookDetails.getId());
         }
         
@@ -132,6 +133,7 @@ public class BookController {
         try {
             bookDao.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
+            logger.debug("L'entité livre n'existe pas, id: " + id);
             throw new RessourceNotFoundException("L'entité livre n'existe pas, id: " + id);
         }
     }    

@@ -91,14 +91,7 @@ public class AvailableCopie {
                 + library + ", ownedQuantity=" + ownedQuantity + "]";
     }
 
-    /* public AvailableCopie(@NotNull @Valid AvailableCopieKey id, Book book, Library library, @NotNull int ownedQuantity,
-            @NotNull int availableQuantity) {
-        this.id = id;
-        this.book = book;
-        this.library = library;
-        this.ownedQuantity = ownedQuantity;
-        this.availableQuantity = availableQuantity;
-    } */
+   
 
     
 

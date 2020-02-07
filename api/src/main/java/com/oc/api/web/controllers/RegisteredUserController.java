@@ -79,6 +79,7 @@ public class RegisteredUserController {
         try {
             registeredUserAdded = registeredUserDao.save(newUser);
         } catch (Exception e) {
+            logger.debug("Cette adresse email est déjà liée à un compte utilisateur: " + registeredUser.getEmail());
             throw new EntityAlreadyExistsException(
                     "Cette adresse email est déjà liée à un compte utilisateur: " + registeredUser.getEmail());
         }
@@ -98,6 +99,7 @@ public class RegisteredUserController {
         try {
             registeredUserDao.findById(registeredUserDetails.getId()).get();
         } catch (NoSuchElementException e) {
+            logger.debug("L'entité utilisateur demandée n'existe pas, id " + registeredUserDetails.getId());
             throw new RessourceNotFoundException(
                     "L'entité utilisateur demandée n'existe pas, id " + registeredUserDetails.getId());
         }
@@ -116,6 +118,7 @@ public class RegisteredUserController {
         try {
             registeredUserDao.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
+            logger.debug("L'entité utilisateur n'existe pas, id: " + id);
             throw new RessourceNotFoundException("L'entité utilisateur n'existe pas, id: " + id);
         }
 

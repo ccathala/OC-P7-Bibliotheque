@@ -143,21 +143,7 @@ public class Book {
                 + ", publicationDate=" + publicationDate + ", synopsis=" + synopsis + ", title=" + title + "]";
     }
 
-    /* public Book(int id, @NotEmpty(message = "Le titre doit être renseigné.") String title,
-            @NotEmpty(message = "Le prénom de l'auteur doit être renseigné.") String authorFirstName,
-            @NotEmpty(message = "Le nom de l'auteur doit être renseigné.") String authorLastName,
-            @NotNull @PastOrPresent LocalDate publicationDate, @NotEmpty @Length(max = 1000) String synopsis,
-            @NotEmpty String pictureURL, Set<Borrow> borrows, Set<AvailableCopie> availableCopies) {
-        this.id = id;
-        this.title = title;
-        this.authorFirstName = authorFirstName;
-        this.authorLastName = authorLastName;
-        this.publicationDate = publicationDate;
-        this.synopsis = synopsis;
-        this.pictureURL = pictureURL;
-        this.borrows = borrows;
-        this.availableCopies = availableCopies;
-    } */
+    
 
     
 

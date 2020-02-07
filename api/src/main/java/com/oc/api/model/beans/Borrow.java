@@ -118,17 +118,6 @@ public class Borrow {
                 + registereduser + ", returnDate=" + returnDate + "]";
     }
 
-    /* public Borrow(int id, @NotNull Book book, @NotNull RegisteredUser registereduser, @NotNull Library library,
-            @NotNull LocalDate borrowDate, @NotNull LocalDate returnDate,
-            @NotNull Boolean extendedDuration, @NotNull Boolean bookReturned) {
-        this.id = id;
-        this.book = book;
-        this.registereduser = registereduser;
-        this.library = library;
-        this.borrowDate = borrowDate;
-        this.returnDate = returnDate;
-        this.extendedDuration = extendedDuration;
-        this.bookReturned = bookReturned;
-    } */
+    
     
 }

@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * ApiProxy
  */
-@FeignClient(name = "oc-bibliotheque-api", url = "localhost:9001")
+@FeignClient(name = "${api.name}", url = "${api.url}")
 public interface ApiProxy {
 
         // Book methods

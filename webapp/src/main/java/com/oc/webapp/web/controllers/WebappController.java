@@ -41,15 +41,15 @@ public class WebappController {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @GetMapping(value = "/")
+    /* @GetMapping(value = "/")
     public String mainPage() {
 
         logger.info("Reach url: / - GET");
 
         return "MainPage";
-    }
+    } */
 
-    @GetMapping(value = "/books")
+    @GetMapping(value = "/")
     public String getBooksPage(Model model, @RequestParam(required = false) String query) {
 
         logger.info("Reach url: /books - GET");
@@ -90,7 +90,10 @@ public class WebappController {
                 response = webappService.createUser(accountDto);
                 status = response.getStatusCodeValue();
             } catch (FeignException e) {
+                logger.debug(e.getMessage());
+                logger.debug(e.getLocalizedMessage());
                 status = e.status();
+                e.printStackTrace();
             }
             if (status == 400)
                 result.addError(new ObjectError("emailAreadyExist",

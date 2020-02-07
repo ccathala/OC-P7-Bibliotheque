@@ -77,6 +77,7 @@ public class BorrowController {
         try {
             borrowAdded = borrowDao.save(borrow);
         } catch (Exception e) {
+            logger.debug("Une ou plusieurs clé étrangères n'existent pas.");
             throw new ForeignKeyNotExistsException("Une ou plusieurs clé étrangères n'existent pas.");
         }
 
@@ -97,6 +98,7 @@ public class BorrowController {
         try {
             borrowDao.findById(borrowDetails.getId()).get(); 
         } catch (NoSuchElementException e) {
+            logger.debug("L'entité prêt demandée n'existe pas, id: " + borrowDetails.getId());
             throw new RessourceNotFoundException("L'entité prêt demandée n'existe pas, id: " + borrowDetails.getId());
         }
         
@@ -114,6 +116,7 @@ public class BorrowController {
         try {
             borrowDao.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
+            logger.debug("L'entité prêt n'existe pas, id: "+ id);
             throw new RessourceNotFoundException("L'entité prêt n'existe pas, id: "+ id);
         }
         

@@ -48,16 +48,7 @@ public class RegisteredUser {
     public RegisteredUser() {
     }
 
-    /* public RegisteredUser(int id, @NotEmpty String firstName, @NotEmpty String lastName, @NotEmpty String email,
-            @NotEmpty String password, @NotEmpty String roles, Set<Borrow> borrows) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-        this.borrows = borrows;
-    } */
+    
 
     public int getId() {
         return id;

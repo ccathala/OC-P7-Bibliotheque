@@ -89,6 +89,7 @@ public class AvailableCopieController {
         try {
             copieAdded = availableCopieDao.save(availableCopie);
         } catch (DataIntegrityViolationException e) {
+            logger.debug("La clé étrangère de l'entité book ou de l'entité library nexiste pas");
             throw new ForeignKeyNotExistsException("L'entité availableCopie n'existe pas, book_id: "+ availableCopie.getId().getBookId() + ", library_id: " + availableCopie.getId().getLibraryId());
         }
         
@@ -114,6 +115,7 @@ public class AvailableCopieController {
         try {
             availableCopieDao.findById(updatedAvailableCopie.getId()).get();
         } catch (NoSuchElementException e) {
+            logger.debug("La clé étrangère de l'entité book ou de l'entité library nexiste pas");
             throw new RessourceNotFoundException("L'entité availableCopie demandée n'existe pas, book_id: "+ updatedAvailableCopie.getId().getBookId() + ", library_id: " + updatedAvailableCopie.getId().getLibraryId());
         }
 
@@ -135,6 +137,7 @@ public class AvailableCopieController {
         try {
             availableCopieDao.deleteById(availableCopieKey);
         } catch (EmptyResultDataAccessException e) {
+            logger.debug("La clé étrangère de l'entité book ou de l'entité library nexiste pas");
             throw new RessourceNotFoundException(
                     "L'entité n'existe pas, book_id: " + bookId + ", library_id: " + libraryId);
         }

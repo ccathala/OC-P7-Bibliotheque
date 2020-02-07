@@ -2,7 +2,7 @@
 INSERT INTO public.registered_user (email, first_name, last_name, "password",roles)
 VALUES
   (
-    'user@test.fr',
+    'ccathala.dev@gmail.com',
     'user',
     'userLastName',
     '$2a$10$1nAVWVhiESnNhYSTMr03N.w2tR0zeqS5YYq9rK7Atb503qa7ksc8K',
