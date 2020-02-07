@@ -193,6 +193,8 @@ Mot de passe : azerty
 
 ## Aperçu du site
 
+URL : https://localhost:9002
+
 ![site_sample](site_sample.png)
 
 ## Auteur
