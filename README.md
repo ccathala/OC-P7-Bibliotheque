@@ -160,6 +160,8 @@ java -jar application.jar
 
 Cette commande va compiler le code et lancer la séquence de test, générer le package .jar et lancer l'application sous Tomcat.
 
+Remplacez application.jar par le nom de l'application à lancer.
+
 ### Import des données de démonstration
 
 1. Lancer une première fois le service api pour générer les tables dans la base de données.
